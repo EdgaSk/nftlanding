@@ -1,0 +1,169 @@
+main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.leftCollum {
+    background: linear-gradient(to right, #ff3998, #ff7c39, #97df9b);
+    border-radius: 20px;
+    display: none;
+    padding-top: 50px;
+}
+
+.coverImg {
+    margin: auto;
+    object-fit: cover;
+}
+
+.rightColum {
+    display: flex;
+    justify-content: center;
+}
+
+.signupCointainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin:auto;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid var(--grey);
+}
+
+.signupCointainer > :nth-child(1) {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--grey-7);
+}
+
+.signupForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.signupForm div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.signupForm input {
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid var(--orange);
+}
+
+.signupForm input:focus {
+    outline: solid 1px var(--pink);
+}
+
+.signUpButton {
+    align-self: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    width: 200px;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.signUpButton:before {
+    background: linear-gradient(to right, #ff3998, #ff7c39, #97df9b);
+    width: 204px;
+    height: 44px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    content: "";
+    border-radius: 25px;
+    z-index: -1;
+}
+
+.webLogin {
+    margin-top: 30px;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.webLogin div {
+    font-size: 0.8rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+.webLogin img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.web3Login {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.web3Login div {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.web3Login img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    section {
+        grid-template-columns: 1fr 2fr;
+    }
+    
+    .leftCollum {
+        display: flex;
+    }
+
+    .coverImg {
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    main {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    .coverImg {
+        width: 70%;
+    }
+
+    .signUpButton, .webLogin img, .web3Login > :nth-child(2), .web3Login > :nth-child(3)  {
+        cursor: pointer;
+    }
+}

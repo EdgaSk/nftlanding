@@ -1,0 +1,130 @@
+main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.launchTitle :nth-child(1) {
+    color: var(--pink);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.launchTitle :nth-child(2) {
+    font-weight: 900;
+    font-size: 2rem;
+}
+  
+.timeLineCointainer {
+    display: flex;
+}
+  
+.timeLineCointainer ul {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+  
+.timeLineCointainer li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.timeLineCointainer li > div {
+    background-color: var(--light-grey);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.timeLineCointainer li > div div {
+    margin-bottom: 10px;
+}
+
+.timeLineCointainer li > div :nth-child(1) {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.timeLineCointainer li > div :nth-child(2) {
+    font-size: 1.2rem;
+    color: var(--grey);
+}
+
+.timeLineCointainer li > div :nth-child(3) {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(43, 43, 43);
+}
+
+.timeLineOrange li{
+    border-right: 7px solid var(--orange);
+    margin: 0 30px;
+    position: relative;
+}
+
+.circleTime {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border: 5px solid var(--orange);
+    border-radius: 25px;
+    position: absolute;
+    top: 50px;
+    right: -20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--grey);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .timeLineCointainer ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .timeLineCointainer ul li:nth-child(odd) {
+        grid-column: 1;
+        text-align: right;
+        border-right: 7px solid var(--orange);
+        text-align: right;
+    }
+    
+    .timeLineCointainer ul li:nth-child(even) {
+        grid-column: 2;
+        margin-top: 40%;
+    }
+
+    .timeLineOrange li {
+        border: none;
+        margin: 0;
+    }
+
+    .circleTime.crtEven {
+        left: -20px;
+    }
+    
+    .circleTime:not(.crtEven) {
+        right: -20px;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    main {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    .timeLineCointainer ul li:nth-child(even) {
+        grid-column: 2;
+        margin-top: 30%;
+    }
+}

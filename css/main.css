@@ -1,0 +1,288 @@
+main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+section {
+    margin-top: 40px;
+}
+
+.infoBlockCointainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.textInfoBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textInfoBlock div {
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+}
+
+.textInfoBlock :nth-child(1) {
+    color: var(--pink);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.textInfoBlock :nth-child(2) {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.textInfoBlock :nth-child(3) {
+    color: var(--grey);
+}
+
+.signUpButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    text-decoration: none;
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    position: relative;
+}
+
+.signUpButton:before {
+    background: linear-gradient(to right, #ff3998, #ff7c39, #97df9b);
+    width: 104px;
+    height: 44px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    content: "";
+    border-radius: 25px;
+    z-index: -1;
+}
+
+.graphicImg {
+    width: 100%;
+    margin: auto;
+}
+
+.secondCointainer {
+    background: linear-gradient(to right, #ff3998, #ff7c39, #97df9b);
+    min-height: 150px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    margin: 40px -20px 0;
+}
+
+.secondCointainer :nth-child(1) {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.secondCointainer :nth-child(2) {
+    font-size: 0.8rem;
+}
+
+.companiesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.companiesContainer img {
+    width: 80px;
+}
+
+.nftCardCointainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.nftCointainerText {
+    font-size: 1.7rem;
+    font-weight: 500;
+}
+
+.nftCointainerText :nth-child(2) {
+    font-size: 0.8rem;
+    margin-top: 10px;
+    color: var(--grey);
+}
+
+.nftCointainerText :nth-child(2) a{
+    color: var(--grey);
+    font-weight: 600;
+}
+
+.nftCardGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 30px;
+    column-gap: 20px;
+    overflow-x: scroll;
+    padding-bottom: 10px;
+}
+
+.nftCardGrid::-webkit-scrollbar {
+    height: 8px;
+}
+  
+.nftCardGrid::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, #ff3998, #ff7c39, #97df9b);
+    border-radius: 4px;
+}
+  
+.nftCardGrid::-webkit-scrollbar-track {
+    background-color: var(--light-grey);
+}
+
+.nftCard {
+    display: flex;
+    background-color: var(--light-grey);
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.nftInfo {
+   display: flex;
+   justify-content: space-between;
+   padding: 15px;
+}
+
+.nftInfo :nth-child(2) {
+    align-items: flex-end;
+}
+
+.nftInfoLine {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nftInfoLine div {
+    margin-bottom: 5px;
+}
+
+.nftInfoLine :nth-child(1) {
+    font-size: 0.7rem;
+    color: var(--grey-7);
+    font-weight: 500;
+}
+
+#gloopSeries {
+    color: #ff8139;
+}
+
+.nftInfoLine :nth-child(2) {
+    font-weight: 600;
+}
+
+.nftInfoLine :nth-child(2) img{
+    width: 9px;
+    padding-right: 10px;
+}
+
+.nftInfoLine :nth-child(3) {
+    color: var(--grey-7);
+    font-size: 0.8rem;
+}
+
+.upsellImg {
+    height: 70%;
+    margin-top: auto;
+    margin-left: 20%;
+}
+
+.borderTopBottom {
+    border-top: 2px solid var(--border-gray);
+    border-bottom: 2px solid var(--border-gray);
+}
+
+@media screen and (min-width: 768px) {
+    main {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .textInfoBlock div {
+        margin-bottom: 20px;
+        font-size: 0.8rem;
+    }
+    
+    .textInfoBlock :nth-child(1) {
+        color: var(--pink);
+        font-weight: 700;
+        margin-bottom: 5px;
+    }
+    
+    .textInfoBlock :nth-child(2) {
+        font-weight: 900;
+        font-size: 2.5rem;
+    }
+
+    .graphicImg {
+        width: 80%;
+    }
+
+    .secondCointainer {
+        min-height: 250px;
+        margin: 40px -50px 0;
+        padding: 0 50px;
+    }
+
+    .secondCointainer :nth-child(1) {
+        font-size: 1.9rem;
+        font-weight: 500;
+        margin-bottom: 30px;
+    }
+
+    .companiesContainer {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        row-gap: 20px;
+    }
+    
+    .companiesContainer img {
+        width: 120px;
+    }
+
+    .upsellImg {
+        height: 70%;
+        margin-top: auto;
+        margin-left: 40%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    main {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    section {
+        margin-top: 60px;
+    }
+
+    .signUpButton:hover {
+        background-color: rgba(255, 255, 255, 0.651);
+    }
+
+    .secondCointainer {
+        border-radius: 20px;
+        margin: 0;
+    }
+
+    .companiesContainer img {
+        cursor: pointer;
+    }
+}
