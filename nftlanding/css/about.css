@@ -1,0 +1,161 @@
+main {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.aboutFirst {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.textInfoBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textInfoBlock div {
+    margin-bottom: 15px;
+    font-size: 0.8rem;
+}
+
+.textInfoBlock :nth-child(1) {
+    color: var(--pink);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.textInfoBlock :nth-child(2) {
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.textInfoBlock :nth-child(3+1) {
+    color: var(--grey);
+}
+
+.aboutImg {
+    width: 100%;
+    margin: auto;
+}
+
+.secondAbout {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+
+.secondBlockAbout {
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #ff3998, #ff7c39, #97df9b);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.secondBlockAbout :nth-child(1) {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.secondBlockAbout :nth-child(1) img{
+    width: 50px;
+    margin-right: 20px;
+}
+
+.meetCrewCointainer {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0;
+}
+
+.meetCrewCointainer > :nth-child(1) {
+    color: var(--pink);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.meetCrewCointainer > :nth-child(2) {
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+.crewGridCointainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    max-width: 500px;
+    margin: auto;
+}
+
+.crewGridCointainer > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--light-grey);
+    padding: 20px;
+    border-radius: 20px;
+    margin-top: 20px;
+}
+
+.crewGridCointainer > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.crewGridCointainer > div :nth-child(2) {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+.crewGridCointainer > div :nth-child(3) {
+    font-size: 0.8rem;
+}
+
+
+@media screen and (min-width: 768px) {
+    main {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .secondAbout {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+
+    .aboutImg {
+        width: 70%;
+        margin: auto;
+    }
+
+    .crewGridCointainer {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 100%;
+        
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    main {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    .secondAbout {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .crewGridCointainer {
+        grid-template-columns: repeat(4, 1fr);  
+    }
+
+}
+

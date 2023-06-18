@@ -1,0 +1,100 @@
+.topNav {
+    height: 80px;
+}
+
+.topNavCointainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    z-index: 100;
+}
+
+.logoImg, .burgerIcon {
+    height: 35px;
+}
+
+.burgerDropCointainer {
+    position: relative;
+}
+
+.burgerDropCointainer:hover .burgerDrop {
+    display: flex;
+}
+
+.burgerDrop {
+    display: none;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    background-color: var(--white);
+    height: 200px;
+    border-bottom-left-radius: 10px;
+    border-bottom: 1px solid var(--light-grey);
+    border-left: 1px solid var(--light-grey);
+}
+
+.menuLinks, .menuLinksMain {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    font-size: 1.2rem;  
+    margin: 15px;
+    padding-left: 5px;
+    justify-content: space-between;
+}
+
+.menuLinksMain {
+    display: none;
+}
+
+.menuLinks li:last-child a, .menuLinksMain li:last-child a{
+    color: var(--pink);
+}
+
+.menuLinks li a, .menuLinksMain li a{
+    color: var(--grey);
+    text-decoration: none;
+}
+
+.menuLinks li a:hover, .menuLinksMain li a:hover {
+    color: var(--pink);
+}
+
+@media screen and (min-width: 768px) {
+    .topNavCointainer {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .burgerDropCointainer {
+        display: none;
+    }
+
+    .menuLinksMain {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .menuLinksMain li{
+        margin-left: 15px;
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    .topNavCointainer {
+        max-width: 1280px;
+        margin: auto;
+    }
+
+    .logoImg {
+        cursor: pointer;
+    }
+}
